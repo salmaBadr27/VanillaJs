@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  min-width: 250px;
+  font-family: sans-serif;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #cc3399;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+.description {
+  position: absolute;
+  right: 373px;
+  top: 0;
+  /* padding: 12px 16px 12px 16px; */
+}
+
+.close:hover {
+  background-color: #cc3399;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #cc3399;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  background: #808080;
+  color: #fff;
+  /* float: left; */
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 10px;
+  box-sizing: content-box;
+}
+
+.addBtn:hover {
+  background-color: #000;
+}
+
+.fa-edit {
+  float: right;
+  margin-right: 10px;
+  color: #cc3399;
+}
+.fa-edit:hover {
+  color: #000;
+}
+
+.fa-trash {
+  float: right;
+  margin-right: 10px;
+  color: #cc3399;
+}
+.fa-trash:hover {
+  color: #000;
+}
+
+.fa-spinner {
+  color: #cc3399;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 400px;
+  font-size: xx-large;
+}
+
+.done {
+  width: 4%;
+  margin-top: 5px;
+}
+
+#err {
+  text-align: center;
+  color: #cc3399;
+}
+#titleItem {
+  margin: 10px;
+}
+
+.error::-webkit-input-placeholder {
+  color: #cc3399;
+}
+.swal-button {
+  background-color: #cc3399;
+}
+.swal-button:not([disabled]):hover {
+  background-color: #000;
+}
+.swal-modal {
+  width: 295px;
+}
+.swal-text {
+  color: #cc3399;
+}
+.swal-icon--error__line {
+  background-color: #cc3399;
+}
+.swal-icon--error {
+  border-color: #cc3399;
+}
